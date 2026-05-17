@@ -1,5 +1,5 @@
 from pypdf import PdfReader
-from transformers import pipeline
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 import os 
 
 def read_pdf(file_path: str):
@@ -27,11 +27,13 @@ def summarize_pdf(file_path:str):
         str: The summary of the pdf file.
     '''
     text = read_pdf(file_path)
+    tokenizer = AutoTokenizer.from_pretrained("Falconsai/text_summarization")
+    model = AutoModelForSeq2SeqLM.from_pretrained("Falconsai/text_summarization")
     summarizer = pipeline(
         task="text-summarization",
-        model="Falconsai/text_summarization"
+        model=model,
+        tokenizer=tokenizer
     )
-
     return summarizer(text)
 
 def question_pdf(file_path: str, question: str):

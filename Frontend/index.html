@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Hugging Face PDF Tool</title>
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: #FFD21E;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            text-shadow: 0.1rem 0.1rem #000000;
+            font-size: 3rem;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            text-shadow: 0.05rem 0.05rem #000000;
+        }
+        h2 {
+            text-align: center;
+            text-shadow: 0.05rem 0.05rem #000000;
+            font-size: 1.5rem;
+        }
+        form {
+            text-align: center;
+        }
+        #hugging-face-logo{
+            display: block;
+            margin: 0 auto;
+            width: 5rem;
+            height: 5rem;
+        }
+        .submit-button {
+            background-color: #ffffff;
+            border: none;
+            color: white;
+            padding: 0.938rem 1.875rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 0.25rem 0.125rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            color: #000000;
+            font-family: 'Jost', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="hugging-face-logo" src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png?download=true" alt="Hugging Face Logo">
+    <h1>Hugging Face PDF Tool</h1>
+    <p>Summarize or Ask questions about uploaded PDF files using lightweight hugging face models.</p><br>
+    <h2>Summarize a PDF</h2>
+    <form action="http://localhost:8000/summarize" method="post" enctype="multipart/form-data">
+        <input class="file-upload" type="file" name="file_path" />
+        <input class="submit-button" type="submit" value="Summarize" />
+    </form><br>
+    <h2>Ask a question about a PDF</h2>
+    <form action="http://localhost:8000/question" method="post" enctype="multipart/form-data">
+        <input class="file-upload" type="file" name="file_path" />
+        <input type="text" name="question" />
+        <input class="submit-button" type="submit" value="Ask" />
+    </form>
+</body>
+</html>
