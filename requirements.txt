@@ -1,6 +1,6 @@
-transformers
+transformers<5.0.0
 fastapi
 uvicorn
 pypdf
-pytorch
+torch
 
