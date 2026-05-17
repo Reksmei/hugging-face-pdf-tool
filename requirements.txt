@@ -1,0 +1,6 @@
+transformers
+fastapi
+os
+uvicorn
+pypdf
+
