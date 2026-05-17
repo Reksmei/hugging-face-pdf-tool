@@ -1,6 +1,6 @@
 # Hugging Face PDF Tool
 
-![Hugging Face Logo](https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png?download=true)
+![Hugging Face PDF Tool](Frontend/README-IMAGE.png)
 
 Hugging Face PDF Tool is a lightweight web application that allows users to summarize PDF documents or ask specific questions about their content. The application leverages Hugging Face's state-of-the-art transformer models to provide accurate and efficient natural language processing directly on your PDF files.
 
